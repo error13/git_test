@@ -1,0 +1,18 @@
+// dirty notes app (include options: new list delete quit )
+let list = []
+while (true) {
+    let choice = prompt('please choose: new, view, delete, quit ')
+    if (choice.toLowerCase() === 'quit' || choice.toLowerCase() === 'q') {
+        window.alert('goodby')
+        break;
+    } else if (choice.toLowerCase() === 'new') {
+        list.push(prompt('enter a new list item'))
+
+    } else if (choice.toLowerCase() === 'view') {
+        for (let i = 0; i < list.length; i++)
+            window.prompt(`${i}: ${list[i]}`);
+    } else if (choice.toLowerCase() === 'delete') {
+        let touch = prompt('choose the number of the list item you would like to delete')
+        list.splice(touch, 1);
+    }
+}
